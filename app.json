@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "scoreboard",
-    "slug": "scoreboard",
+    "name": "Multisport Scoreboard",
+    "slug": "multisport-scoreboard",
+    "owner": "xela722",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "androidNavigationBar": {
+      "visible": "sticky-immersive"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,16 +21,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xela722.multisportscoreboard"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.xela722.multisportscoreboard"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4a55f091-929e-421a-92ec-691ab52625e8"
+      }
     }
   }
 }
