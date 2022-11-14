@@ -33,7 +33,7 @@ const GameCardStyles = StyleSheet.create({
 const GameCard = (props: GameCardProps) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>()
   return (
-    <TouchableNativeFeedback onPress={() => navigation.navigate("Game", {game: props.game})}>
+    <TouchableNativeFeedback onPress={() => navigation.navigate("NHLGame", {game: props.game})}>
       <View style={GameCardStyles.card}>
         <Text style={GameCardStyles.cardTitle}>{props.game.teams.away.team.name} @ {props.game.teams.home.team.name}</Text>
       </View>

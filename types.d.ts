@@ -4,7 +4,8 @@ export interface GameCardProps {
 
 export type RootStackParamList = {
     Home: undefined
-    Game: { game: Game }
+    NHLGame: { game: Game }
+    MLBGame: { game: Game}
 }
 
 export interface NHLSchedule {

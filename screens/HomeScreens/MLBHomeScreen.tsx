@@ -1,12 +1,12 @@
-import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native'
 import React from 'react'
-import GameCard from '../components/GameCard'
-import { Game } from '../types'
-import { useFocusEffect } from '@react-navigation/native'
 import moment from 'moment'
+import { useFocusEffect } from '@react-navigation/native'
+import GameCard from '../../components/GameCard'
+import { Game } from '../../types'
 
-const HomeScreen = () => {
-    const [games, setGames] = React.useState<Game[]>([])
+const MLBHomeScreen = () => {
+  const [games, setGames] = React.useState<Game[]>([])
 
     const today = moment().format('YYYY-MM-DD')
 
@@ -45,4 +45,5 @@ const styles = StyleSheet.create({
     }
 });
 
-export default HomeScreen
+
+export default MLBHomeScreen

@@ -1,11 +1,11 @@
 import { View, Text, Button, StyleSheet, Image, Animated } from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation, NavigationProp, useRoute, RouteProp, useFocusEffect } from '@react-navigation/native';
-import { LiveData, RootStackParamList } from '../types';
+import { LiveData, RootStackParamList } from '../../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SvgFromUri } from 'react-native-svg';
 
-const GameScreen = () => {
+const NHLGameScreen = () => {
     const route = useRoute<RouteProp<RootStackParamList>>();
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
@@ -158,4 +158,4 @@ const GameScreen = () => {
 
 
 
-export default GameScreen
+export default NHLGameScreen
