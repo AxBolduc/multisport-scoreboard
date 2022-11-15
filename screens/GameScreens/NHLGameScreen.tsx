@@ -1,16 +1,17 @@
 import { View, Text, Button, StyleSheet, Image, Animated } from 'react-native'
 import React, { useEffect } from 'react'
 import { useNavigation, NavigationProp, useRoute, RouteProp, useFocusEffect } from '@react-navigation/native';
-import { LiveData, RootStackParamList } from '../../types';
+import { RootStackParamList } from '../../types/Navigation';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SvgFromUri } from 'react-native-svg';
+import { NHL } from '../../types/NHL';
 
 const NHLGameScreen = () => {
     const route = useRoute<RouteProp<RootStackParamList>>();
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
     const game = route.params?.game;
-    const [liveData, setLiveData] = React.useState<LiveData>();
+    const [liveData, setLiveData] = React.useState<NHL.LiveData>();
     const [backgroundColor, setBackgroundColor] = React.useState<string>('#1C3879');
     const [homeGoals, setHomeGoals] = React.useState<number>(game?.linescore.teams.home.goals || 0);
     const [awayGoals, setAwayGoals] = React.useState<number>(game?.linescore.teams.away.goals || 0);

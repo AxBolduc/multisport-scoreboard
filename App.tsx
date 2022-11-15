@@ -5,7 +5,7 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import GameScreen from './screens/GameScreens/NHLGameScreen';
 import HomeScreen from './screens/HomeScreens/NHLHomeScreen';
-import { RootStackParamList } from './types';
+import { RootStackParamList } from './types/Navigation';
 import SportHomeScreen from './screens/HomeScreens/SportHomeScreen';
 import MLBGameScreen from './screens/GameScreens/MLBGameScreen';
 

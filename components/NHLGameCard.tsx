@@ -1,7 +1,8 @@
 import { View, Text, StyleSheet, TouchableNativeFeedback } from 'react-native'
 import React from 'react'
-import { Game, GameCardProps, RootStackParamList } from '../types'
+import { NHL } from '../types/NHL'
 import { NavigationProp, RouteProp, useNavigation, useRoute} from '@react-navigation/native'
+import { RootStackParamList } from '../types/Navigation'
 
 // React native styles for a card component
 const GameCardStyles = StyleSheet.create({
@@ -30,7 +31,7 @@ const GameCardStyles = StyleSheet.create({
 })
 
 
-const GameCard = (props: GameCardProps) => {
+const NHLGameCard = (props: NHL.GameCardProps) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>()
   return (
     <TouchableNativeFeedback onPress={() => navigation.navigate("NHLGame", {game: props.game})}>
@@ -41,4 +42,4 @@ const GameCard = (props: GameCardProps) => {
   )
 }
 
-export default GameCard
+export default NHLGameCard

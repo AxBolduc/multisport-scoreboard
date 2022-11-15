@@ -1,12 +1,12 @@
 import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
-import GameCard from '../../components/GameCard'
-import { Game } from '../../types'
+import NHLGameCard from '../../components/NHLGameCard'
+import { NHL } from '../../types/NHL'
 import { useFocusEffect } from '@react-navigation/native'
 import moment from 'moment'
 
 const NHLHomeScreen = () => {
-    const [games, setGames] = React.useState<Game[]>([])
+    const [games, setGames] = React.useState<NHL.Game[]>([])
 
     const today = moment().format('YYYY-MM-DD')
 
@@ -26,7 +26,7 @@ const NHLHomeScreen = () => {
         <SafeAreaView style={styles.safeView}>
             <ScrollView contentContainerStyle={styles.container}>
                 {games.map((game, index) => {
-                    return <GameCard key={index} game={game} />
+                    return <NHLGameCard key={index} game={game} />
                 })}
             </ScrollView>
         </SafeAreaView>
