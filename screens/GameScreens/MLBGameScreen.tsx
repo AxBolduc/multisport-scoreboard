@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView} from 'react-native'
+import { View, StyleSheet, SafeAreaView} from 'react-native'
 import React from 'react'
 import { SvgFromUri } from 'react-native-svg';
 import { NavigationProp, RouteProp, useNavigation, useRoute } from '@react-navigation/native';
